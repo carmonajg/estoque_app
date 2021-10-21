@@ -1,23 +1,36 @@
 import React from 'react';
-import { StyleSheet, Image, View, TouchableOpacity, Text} from 'react-native';
+import { View, Button} from 'react-native';
 
-import icon from '../../assets/icon.png';
+//import icon from '../../assets/icon.png';
 
-export default function Home() {
-    return  <View style={estilos.container}>
-        <Image source={icon} style={estilos.icon}/>
-            </View>
+export default function Home( navigation ) {
+
+    return ( //<TouchableOpacity>
+        <View >
+            <Button title='Bem Vindo' 
+            onPress={() => navigation.navigate('Login')} />
+        </View>
+        //</TouchableOpacity>
+    )
+    /*return  (
+        <View style={estilos.container}>
+            <Image source={icon} style={estilos.icon}/>
+        </View>
+    )*/
 };
 
-export function BemVindo() {
+/*export function BemVindo(props) {
+
+    console.log(props);
     
     return <TouchableOpacity>
         <View style={estilos.fora}>
-            <Text style={estilos.texto}> Bem-Vindo </Text>
+            <Button title='Bem-Vindo' style={estilos.texto} onPress={() => props.navigation.navigate('Home2')}>Bem Vindo</Button>
+            <Text style={estilos.texto}> Bem Vindo </Text>
         </View>
         </TouchableOpacity>
-};
-
+};*/
+/*
 const estilos = StyleSheet.create({
     icon: {
         height: 315,
@@ -43,3 +56,4 @@ const estilos = StyleSheet.create({
         marginTop: 15
     }
 });
+*/
